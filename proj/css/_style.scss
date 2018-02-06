@@ -1,0 +1,689 @@
+$red: #e94e38;
+$link-color: #96a6a7;
+$green: #1baf5d;
+$green-t: rgba(27, 175, 93, .5);
+$grey: #b6c0c1;
+$orange: #f19e1f;
+$orange-t: rgba(241, 158, 31, .5);
+$purple: #88499c;
+$purple-t: rgba(136, 73, 156, .5);
+$margin-xl: 10%;
+$margin-lg: 5%;
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #f3f1f2;
+}
+
+nav {
+	background: #fff;
+}
+
+p {
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.nav-link {
+	text-decoration: none;
+	color: $link-color;
+	padding: 0 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	
+	&-active {
+		color: $red;
+		padding-left: 0;
+	}
+}
+
+.nav-float-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.topnav {
+	position: relative;
+	line-height: 70px;
+	
+	&-left {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-30%);
+	}
+	
+	&-logo {
+		width: 80%;
+	}
+	
+	&-center {
+		text-align: center;
+	}
+	
+	&-right {
+		background: $red;
+		box-sizing: border-box;
+		
+		&-search {
+			
+			background: $link-color;
+			font-size: 1.5em;
+			color: #fff;
+			line-height: 73px;
+			padding: 23px;
+		}
+		
+		& i.ion-person {
+			padding-right: 10px;
+		}
+		
+		& .topnav-link {
+			color: #fff;
+		}
+	}
+}
+
+.cta {
+	position: relative;
+	font-size: 1.5em;
+	
+	&-header {
+		text-align: center;
+		color: #fff;
+	}
+	
+	&-bg {
+		width: 100%;
+		display: block;
+	}
+	
+	&-form {
+		width: 100%;
+		max-width: 700px;
+		
+		&-container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 9999;
+		}
+		
+		&-option {
+			color: #000;
+		}
+		
+		& select {
+			float: left;
+			width: calc(50% - 10px);
+			margin-bottom: 20px;
+			
+			&:last-of-type {
+				margin-left: 20px;
+			}
+		}
+		
+		& input {
+			display: block;
+			width: 100%;
+			margin: 20px 0;
+			
+			&::placeholder {
+				color: #ddd;
+			}
+		}
+		
+		& select, & input, & button {
+			border: none;
+			background: rgba(255,255,255,.1);
+			border: 1px solid rgba(255,255,255,.2);
+			padding: 10px 20px;
+			border-radius: 50px;
+			box-sizing: border-box;
+			color: #ddd;
+		}
+		
+		&-button {
+			text-align: center;
+		}
+		
+		& button {
+			background: $red;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.subnav {
+	line-height: 60px;
+	position: relative;
+	
+	border-bottom: 1px solid $link-color;
+	
+	& form, & p {
+		display: inline-block;
+		margin: 0;
+	}
+	
+	&-filter {
+		width: 100%;
+		max-width: 291px;
+		text-transform: uppercase;
+		
+		& p {
+			color: $link-color;
+			padding-right: 10px;
+		}
+		
+		&-link {
+			display: inline-block;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			font-size: 1.3em;
+			color: #fff;
+			text-align: center;
+			line-height: 40px;
+		}
+		
+		&-reality {
+			background: $green;
+		}
+		
+		&-living {
+			background: $grey;
+		}
+		
+		&-education {
+			background: $grey;
+		}
+		
+		&-entertainment {
+			background: $orange;
+		}
+		
+		&-mobility {
+			background: $purple;
+		}
+	}
+	
+	&-destination {
+		background: #fff;
+		color: $red;
+		margin-left: 15%;
+	}
+	
+	&-map {
+		color: $link-color;
+		text-decoration: none;
+		margin-left: 40px;
+		
+		& i {
+			padding-left: 10px;
+		}
+	}
+	
+	&-destination, &-map {
+		padding: 10px 20px;
+		border: 1px solid $link-color;
+		border-radius: 20px;
+		text-transform: uppercase;
+	}
+}
+
+.articles {
+	
+	&-wrapper {
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 40px;
+		border-bottom: 1px solid $link-color;
+		
+	}
+	
+	&-row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		margin: 50px 0;
+	}
+	
+	&-load {
+		text-align: center;
+		color: $link-color;
+		display: block;
+		font-weight: bold;
+		text-decoration: none;
+	}
+}
+
+.article {
+	background: #fff;
+	color: #666;
+	position: relative;
+	border-radius: 5px;
+	
+	img {
+		display: block;
+		width: 100%;
+		border-radius: 5px 5px 0 0;
+	}
+	
+	&-narrow {
+		width: 23%;
+	}
+	
+	&-wide {
+		width: 48.7%;
+		
+		&-review {
+			&-avatar {
+				height: 100%;
+				img {
+					width: 80px;
+					height: 80px;
+					float: left;
+					margin: 60px 40px;
+					border-radius: 50%;
+					border: 5px solid $link-color;
+				}
+			}
+			
+			&-body {
+				margin-top: 20px;
+				span, a {
+					display: block;
+				}
+				
+				& .rating-stars {
+					font-size: 2em;
+				}
+				
+			}
+			
+			&-author {
+				color: $link-color;
+				text-decoration: none;
+				font-size: 2em;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin: 10px 0;
+			}
+			
+			&-text {
+				color: $link-color;
+				font-size: 1.4em;
+				padding: 0 40px 30px 0;
+				
+				& a {
+					color: $link-color;
+					font-weight: bold;
+					display: inline;
+				}
+			}
+		}
+	}
+	
+	&-description, .company, .rating {
+		margin: 0 20px 20px 20px;
+	}
+	
+	.company, .rating {
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		font-size: 1.3em;
+	}
+	
+	&-description {
+		margin-top: 60px;
+		font-size: 1.8em;
+		margin-bottom: 80px;
+	}
+	
+	&-living &-icon, &-living &-icon-wrapper {
+		background: $green;
+	}
+	
+	&-living .company {
+		color: $green;
+	}
+	
+	&-entertainment &-icon, &-entertainment &-icon-wrapper {
+		background: $orange;
+	}
+	
+	&-entertainment .company, .rating-stars {
+		color: $orange;
+	}
+	
+	&-mobility &-icon, &-mobility &-icon-wrapper {
+		background: $purple;
+	}
+	
+	&-mobility .company {
+		color: $purple;
+	}
+	
+	.price {
+		position: absolute;
+		z-index: 9997;
+		top: 10px;
+		right: 10px;
+		background: $green;
+		padding: 5px 10px;
+		color: #fff;
+		border-radius:20px;
+	}
+	
+	.rating {
+		margin-bottom: 10px;
+		
+		&-number {
+			color: #aaa;
+		}
+		
+		&-bottom {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+		}
+	}
+	
+	&-icon {
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		line-height: 94px;
+		text-align: center;
+		border-radius: 50%;
+		font-size: 3em;
+		color: #fff;
+		border: 5px solid #fff;
+		box-sizing: border-box;
+		z-index: 9999;
+		
+		&-wrapper {
+			position: relative;
+			height: 5px;
+		}
+	}
+	
+	&-narrow &-icon {
+		left: 50%;
+		top: -1000%;
+		transform: translateX(-50%);
+	}
+	
+	&-wide &-icon {
+		left: 10%;
+		top: -1000%;
+		transform: translateX(-50%);
+	}
+	
+	&-wide-bg {
+		position: relative;
+		
+		&-darken {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+1,000000+100&0+32,1+100 */
+			background: -moz-linear-gradient(top, rgba(0,0,0,0) 1%, rgba(0,0,0,0) 32%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 32%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(0,0,0,0) 1%,rgba(0,0,0,0) 32%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+		}
+	}
+	
+	.wide-info {
+		left: 15%;
+		bottom: 300%;
+		position: absolute;
+		
+		& p {
+			color: #fff;
+			font-size: 1.7em;
+			display: inline;
+		}
+		
+		& .rating-number {
+			color: #fff;
+		}
+	}
+	
+	&:hover &-hover {
+		display: block;
+	}
+	
+	&-img-container {
+		position: relative;
+	}
+	
+	&-hover {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 9999;
+		
+		&-living {
+			background: $green-t;
+		}
+		
+		&-entertainment {
+			background: $orange-t;
+		}
+		
+		&-mobility {
+			background: $purple-t;
+		}
+		
+		&-show {
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translateX(-50%);
+			border: 3px solid #fff;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 30px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		
+		&-icons {
+			position: absolute;
+			bottom: 40%;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 2em;
+			color: #fff;
+		}
+	}
+}
+
+.offer {
+	&-header {
+		margin-top: 80px;
+		color: #666;
+		margin-bottom: 10px;
+	}
+	
+	&-header, &-subheader {
+		text-align: center;
+	}
+	&-subheader {
+		color: $link-color;
+		margin-top: 0;
+	}
+	
+	&-icons {
+		font-size: 3em;
+		border: 3px solid $link-color;
+		border-radius: 50%;
+		display: block;
+		width: 70px;
+		height: 70px;
+		float: left;
+		text-align: center;
+		line-height: 70px;
+		color: $link-color;
+		
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 80px;
+		}
+		
+		&-active {
+			color: $green;
+			border-color: $green;
+		}
+		
+		&-header {
+			color: $green;
+			text-align: center;
+			margin: 40px 0;
+		}
+		
+		&-block {
+			width: 47%;
+			&-left {
+				float: left;
+			}
+			&-right {
+				float: right;
+			}
+			
+			&-icon {
+				float: left;
+				height: 100%;
+				width: 60px;
+				color: #fff;
+				background: $green;
+				border-radius: 50%;
+				font-size: 2em;
+				line-height: 60px;
+				text-align: center;
+				margin: 0 40px 150px 0;
+			}
+			
+			&-text {
+				padding-right: 40px;
+				color: #666;
+			}
+		}
+		
+	}
+	&-wrapper {
+		width: 60%;
+		margin: 0 auto;
+	}
+}
+
+.footer {
+	background: url('./../img/cta-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	
+	&-header {
+		text-align: center;
+		color: #fff;
+		margin-bottom: 40px;
+	}
+	& form {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 400px;
+		background: rgba(255,255,255,.1);
+		border: 1px solid rgba(255,255,255,.2);
+		padding: 3px 3px 3px 20px;
+		border-radius: 50px;
+		box-sizing: border-box;
+		color: #ddd;
+		
+		& input {
+			line-height: 33px;
+		}
+		
+		& input, & button {
+			background: transparent;
+			border: 0;
+		}
+		
+		& input::placeholder {
+			color: #fff;
+		}
+		
+		button {
+			background: $red;
+			text-transform: uppercase;
+			padding: 9px 20px;
+			border-radius: 50px;
+			float: right;
+			color: #fff;
+		}
+	}
+	
+	&-lists {
+		border-top: 1px solid #666;
+		margin-top: 40px;
+		display: flex;
+		flex: none;
+		justify-content: space-between;
+		&-item {
+			&:last-of-type {
+				
+			}
+			&-header {
+				color: #fff;
+			}
+			
+			&-last { 
+				position: relative;
+				width: 300px;
+				height: 60%;
+				color: #fff;
+				
+				& i {
+					padding-right: 20px;
+					font-size: 2em;
+				}
+			}
+			
+			&-bottom {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			
+			ul {
+				padding: 0;
+				li {
+					list-style-type: none;
+					padding-bottom: 5px;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
